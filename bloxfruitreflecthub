@@ -1,0 +1,220 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/kav"))()
+local Window = Library.CreateLib("Reflection HUB", "Synapse")
+ 
+local Tab = Window:NewTab("Main")
+local SpeedSection = Tab:NewSection("General/Player")
+ 
+SpeedSection:NewSlider("WalkSpeed", "Slide to the right to go faster!", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+ 
+SpeedSection:NewSlider("JumpPower", "Slide to the right to jump high!", 350, 50, function(s) -- 350 (MaxValue) | 50 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+ 
+SpeedSection:NewButton("Reset W/S and J/P", "Resets your speed and jump power", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+ 
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+ 
+SpeedSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+end)
+
+SpeedSection:NewButton("ESP", "Lets you chat see people through walls", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/ULLN8m0c'),true))()
+end)
+ 
+Other:NewButton("Admin CMDS (Unknown Ban Risk)", "Lets Get Admin", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+local BF = Window:NewTab("Blox Fruits")
+        local BFSection = BF:NewSection("AutoFarm")
+        
+        BFSection:NewButton("Bounty Farm", "Loads W-Azure!", function()
+            if script_key then
+                return
+                end
+                --Put Your Key Between ""
+                script_key="JqpyROeGLLVwdTLuQjeTzZeNpwVkimjh";
+                DelayTime = 300
+                getgenv().FpsBoost = false
+                getgenv().Setting = {
+                        ["Team"] = "Pirates", --Marines
+                        ["Webh00k"] = {
+                            ["Enabled"] = true,
+                            ["Embed"] = true,
+                            ["Url"] = "",
+                            ["StoredFruit"] = true,
+                            ["ImageEmbed"] = true,
+                            ["CustomImage"] = false,
+                            ["CustomImageUrl"] = "", --Your Url
+                            ["OnServerHop"] = true,
+                            ["BountyChanged"] = true,
+                        }, 
+                        ["Theme"] = {
+                            ["Name"] = "Hutao",--"Old", "Raiden","Ayaka","Hutao","Yelan","Miko","Nahida","Ganyu","Keqing","Nilou","Barbara","Zhongli","Layla"
+                            ["Custom"] = {
+                                ["Enable"] = false,
+                                ['char_size'] = UDim2.new(0.668, 0, 1.158, 0),
+                                ['char_pos'] = UDim2.new(0.463, 0, -0.105, 0),
+                                ['title_color'] = Color3.fromRGB(255, 221, 252),
+                                ['titleback_color'] = Color3.fromRGB(169, 20, 255),
+                                ['list_color'] = Color3.fromRGB(255, 221, 252),
+                                ['liststroke_color'] = Color3.fromRGB(151, 123, 207),
+                                ['button_color'] = Color3.fromRGB(255, 221, 252)
+                            },
+                        },
+                        ["Config"] = {
+                            ["nameaccount1"] = "nameconfig.txt",
+                            ["nameaccount2"] = "nameconfig.txt",
+                        },
+                        AutoConfigMelee = true,
+                        AutoConfigSword = true,
+                        AutoConfigFruit = true,
+                        ["LimitServerHop"] ={
+                            Enable = false,
+                            Time = 600,
+                        },
+                        ["Hide Setting Panel"] = {
+                            Enable = false,
+                        },
+                        ["High Position"] = {
+                            Enable = false,
+                        },
+                        ["Panel"] = {
+                            ["Enabled"] = false,
+                            ["IgnoreSelfChat"] = false,
+                        },
+                        ["NexusEnable"] = true,
+                        ["ChatKill"] = {
+                            Enable = true,
+                            Chat = {""
+                            },
+                        },
+                        ["Mention"] = {
+                            ["Enable"] = false,
+                            ["Id"] = "everyone",
+                            ["EveryBounty"] = 10000,
+                        },
+                        ["FpsLock"] = {
+                            ["Enable"] = true,
+                            ["Cap"] = 30,
+                        },
+                        ["LockBounty"] = {
+                            ["Enable"] = true,
+                            ["Cap"] = 30000000,
+                        },
+                        ["Click"] = {
+                            ["Enable"] = true,
+                            ["OnLowHealthDisable"] = false,
+                            ["LowHealth"] = 3000,
+                        },
+                        ["Misc"] = {
+                            ["AutoBuyRandomandStoreFruit"] = true,
+                            ["AutoBuySurprise"] = true,
+                        },
+                        ["Invisible"] = false,
+                        ["IgnoreFriends"] = true, --Server Hop When Your friends in your server
+                        ["GunMethod"] = false, --Use Melee,Gun Will automaticly disable invisible for things
+                        ["SpamSkill"] = false, -- Will use all skills as fast as possbile ignore holding skills
+                        ["Weapons"] = {
+                            ["Melee"] = {
+                                ["Enable"] = true,
+                                ["Delay"] = 3,
+                                ["Skills"] = {
+                                    ["Z"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+                                [ "X"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+        
+                                    ["C"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+                                },
+                            },
+                            ["Blox Fruit"] = {
+                                ["Enable"] = true,
+                                ["Delay"] = 3,
+                                ["Skills"] = {
+                                    ["Z"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+                                    ["X"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+        
+                                    ["C"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+                                    ["V"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+                                    ["F"] = {
+                                        ["Enable"] = true, -- Disable if not magma fruit!
+                                        ["HoldTime"] = 0,
+                                    },
+                                },
+                            },
+                            ["Sword"] = {
+                                ["Enable"] = false,
+                                ["Delay"] = 2,
+                                ["Skills"] = {
+                                    ["Z"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 1,
+                                    },
+                                    ["X"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+                                },
+                            },
+                            ["Gun"] = {
+                                ["Enable"] = false,
+                                ["Delay"] = 0,
+                                ["Skills"] = {
+                                    ["Z"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 1,
+                                    },
+                                    ["X"] = {
+                                        ["Enable"] = true,
+                                        ["HoldTime"] = 0,
+                                    },
+                                },
+                            },
+        
+                        }
+                    }
+                repeat wait()
+                until game:IsLoaded()
+                delay(DelayTime or 300,function()
+                    local CG = game:GetService("CoreGui")
+                    if not CG:FindFirstChild("W-azureHubAutoBounty") then
+                    game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+                    end
+                end)
+                wait(2)
+                loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ef12e2cf26dbe1e9c5225df9477e8612.lua"))()
+        
+        end)
+
+        local BFSSection = BF:NewSection("Script-Loaders")
+
+        BFSSection:NewButton("Load Mokuro Hub", "Loads Mokuro", function()
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+        end)
