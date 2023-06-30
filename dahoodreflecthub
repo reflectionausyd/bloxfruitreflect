@@ -1,0 +1,44 @@
+ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/kav"))()
+local Window = Library.CreateLib("Reflection HUB", "Synapse")
+ 
+local Tab = Window:NewTab("Main")
+local SpeedSection = Tab:NewSection("General/Player")
+ 
+SpeedSection:NewSlider("WalkSpeed", "Slide to the right to go faster!", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+ 
+SpeedSection:NewSlider("JumpPower", "Slide to the right to jump high!", 350, 50, function(s) -- 350 (MaxValue) | 50 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+ 
+SpeedSection:NewButton("Reset W/S and J/P", "Resets your speed and jump power", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+ 
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+ 
+SpeedSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+end)
+
+SpeedSection:NewButton("ESP", "Lets you chat see people through walls", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/ULLN8m0c'),true))()
+end)
+ 
+Other:NewButton("Admin CMDS (Unknown Ban Risk)", "Lets Get Admin", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+local DaHood = Window:NewTab("DaHood")
+    local DHCSection = DaHood:NewSection("Combat")
+
+    DHCSection:NewButton("Aim Lock)", "The keybind is Q", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/3JNxS8fA'),true))()
+    end)
+
+    SpeedSection:NewButton("No-Clip", "Allows you to see through walls!", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/pKV2Ys4E'),true))()
+    end)
