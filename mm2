@@ -1,0 +1,46 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Reflection Hub", "DarkTheme")
+local Main = Window:NewTab("Main")
+local PlayerSection = Main:NewSection("Local Player")
+local UtilitiesSection = Main:NewSection("Utilities")
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+PlayerSection:NewSlider("Walk Speed", "Determines your speed depending on the slider", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("Jump Power", "Determines your jump power depending on the slider", 350, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+OtherSection:NewButton("Infinite Yeild (BANNABLE IN POPULAR GAMES)", "Basically admin commands (USE AT OWN RISK)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))("")
+end)
+
+UtilitiesSection:NewButton("Fly", "Hold Space to fly and to Noclip fly hold Shift", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/NVX9V7ve'))("")
+end)
+
+UtilitiesSection:NewButton("ESP (FOR MM2 ESP GO TO THE MM2 TAB)", "Lets you see people through walls!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/hpMC6ULU'))("")
+    loadstring(game:HttpGet('https://pastebin.com/raw/LZwQSHrL'))("")
+end)
+
+local MM2 = Window:NewTab("MM2")
+local MM2CSection = MM2:NewSection("Script-Loaders")
+local MM2USection = MM2:NewSection("Utilities")
+
+MM2CSection:NewButton("Load Eclipse Hub", "Loads the gui Eclipse", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script'))("")
+end)
+
+MM2USection:NewButton("ESP (Use only in MM2)", "Loads a mm2 optimized esp script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
+end)
+
+local MM2CRSection = MM2:NewSection("Combat")
+
+MM2CRSection:NewButton("Silent Aim/Aimbot (NOT WORKING)", "not working for now!", function()
+    print("sorry this module is not working as of now")
+end)
